@@ -1,0 +1,61 @@
+# Express User API
+
+# ExpressJS User Management Application
+
+This is a simple ExpressJS application that reads a list of users from a JSON file and exposes two routes to interact with the users' data.
+
+## Routes
+
+### 1. GET /users
+
+- **Description**: Returns a list of all users.
+- **HTTP Method**: GET
+- **Response**: JSON array containing all users.
+
+### 2. GET /users/:id
+
+- **Description**: Returns a specific user based on the provided ID.
+- **HTTP Method**: GET
+- **Parameters**:
+  - `:id` (string): The ID of the user to retrieve.
+- **Response**: JSON object representing the user with the specified ID, or an error message if the user is not found.
+
+
+### Prerequisites
+
+- Node.js installed on your machine.
+
+### Installation
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Install dependencies using npm:
+4. Start the server:
+5. The server will start running on `http://localhost:3000`.
+
+## Usage
+
+### Routes
+
+- **GET /users**: Get all users.
+- **GET /users/:id**: Get user by ID.
+
+### Example
+
+To get all users, send a GET request to `http://localhost:3000/users`.
+
+To get a specific user with ID 1, send a GET request to `http://localhost:3000/users/1`.
+
+## File Structure
+
+- `index.js`: Main application file.
+- `users.json`: JSON file containing user data.
+
+## Error Handling
+
+If there's an error reading the user data from the file, the application will log the error.
+
+## Dependencies
+
+- express: "^4.17.1"
+

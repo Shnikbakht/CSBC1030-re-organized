@@ -1,0 +1,25 @@
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lVGVzdCIsImlhdCI6MTcxMzc0MDk5OCwiZXhwIjoxNzEzNzQxMDU4fQ.eWWTYeW54RUvzCKAFC-EzeuZiZfGVb1Ilk8X7peyTX4
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "username": "usernameTest",
+  "password": "passwordTest"
+}
+
+###
+GET http://localhost:3000/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lVGVzdCIsImlhdCI6MTcxMzgyNTM5NCwiZXhwIjoxNzEzODI4OTk0fQ.7iivsHWmzcN5UAyoyehxyO3f2ESCaPINjx_kHw3TsKs
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lVGVzdCIsImlhdCI6MTcxMzgyNTM5NCwiZXhwIjoxNzEzODI4OTk0fQ.7iivsHWmzcN5UAyoyehxyO3f2ESCaPINjx_kHw3TsKs
+
+ {
+    "id": 10,
+    "name": "newUser",
+    "username": "newUser000"
+  }

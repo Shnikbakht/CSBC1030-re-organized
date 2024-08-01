@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "userTest",
+    "username": "usernameTest"
+  },
+  {
+    "id": 2,
+    "name": "Komal",
+    "username": "komal456"
+  },
+  {
+    "id": 3,
+    "name": "Karen",
+    "username": "karen789"
+  },
+  {
+    "id": 4,
+    "name": "Baba",
+    "username": "baba321"
+  },
+  {
+    "id": 5,
+    "name": "Kian",
+    "username": "kian654"
+  },
+  {
+    "id": 6,
+    "name": "Amin",
+    "username": "amin987"
+  },
+  {
+    "id": "12",
+    "name": "Mariam",
+    "username": "mariam12"
+  },
+  {
+    "id": 10,
+    "name": "newUser",
+    "username": "newUser000"
+  },
+  {
+    "id": 10,
+    "name": "newUser",
+    "username": "newUser000"
+  },
+  {
+    "id": 10,
+    "name": "newUser",
+    "username": "newUser000"
+  }
+]

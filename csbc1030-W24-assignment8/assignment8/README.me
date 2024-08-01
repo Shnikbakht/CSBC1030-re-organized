@@ -1,0 +1,59 @@
+Overview
+This project implements a user entity retrieval service, providing functionalities to retrieve user entities securely. It includes both unit tests and end-to-end tests to ensure the reliability and security of the service.
+
+Features
+Allows users to retrieve their own entity securely.
+Ensures appropriate error handling when attempting to retrieve a different user entity.
+Validates authentication for entity retrieval requests.
+Utilizes MySQL database for storing user information securely.
+Unit Tests
+We have implemented 3 unit tests to cover various scenarios:
+
+Retrieve Own Entity Test: Verifies successful retrieval of the user's own entity.
+Retrieve Different Entity Test: Ensures that attempting to retrieve a different user entity results in the appropriate error code being returned.
+Authentication Test: Validates that an entity cannot be retrieved if the request is not authenticated, returning the expected error code.
+End to End Tests
+Additionally, we have developed 3 End to End tests to validate the following scenarios:
+
+Successful Retrieval Test: Tests successful retrieval of the user's own entity.
+Retrieve Different Entity Test: Verifies that attempting to retrieve a different user entity returns the appropriate error code.
+Authentication Test: Validates that an entity cannot be retrieved if the request is not authenticated, returning the expected error code.
+Testing Environment
+Ensure that the code is run in a testing environment to execute the tests effectively.
+
+Database Setup
+To use this service, set up a MySQL database using the following configuration and schema:
+
+"test": {
+  "username": "root",
+  "password": "password",
+  "database": "test_db_course4",
+  "host": "localhost",
+  "port": "3306",
+  "dialect": "mysql"
+}
+
+
+sql
+Copy code
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  username VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO users (name, username, password, createdAt, updatedAt) 
+VALUES 
+  ('user1', 'username1', 'password1', NOW(), NOW()),
+  ('user2', 'username2', 'password2', NOW(), NOW());
+Usage
+Clone the repository.
+Set up the MySQL database with the provided schema.
+Configure the testing environment.
+Run the tests to ensure proper functionality.
+
+npm run test e2e.test.js
+npm run test unit.test.js

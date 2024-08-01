@@ -1,0 +1,41 @@
+# Process File
+
+This Node.js program reads an array of numbers from an input JSON file, multiplies each number by 2, and writes the resulting array to an output JSON file.
+
+## Installation
+
+Clone the repository, navigate to the project directory, and install dependencies:
+
+
+## Usage
+
+To process a file, run the following command:
+
+```bash
+node process-file.js <input_file> <output_file>
+```
+
+Replace `<input_file>` with the path to the input JSON file containing an array of numbers, and `<output_file>` with the desired path for the output JSON file.
+
+For example:
+
+```bash
+node process-file.js sample_input_numbers.json sample_output_numbers.json
+```
+
+## File Format
+
+The input file should contain JSON data with the following format. The "numbers" array can contain any number of elements.
+
+```
+{
+    "numbers": [1, 2, 3]
+}
+```
+
+The output file will contain JSON data in the same format, with the doubled numbers stored under the key "doubledArray".
+
+## Dependencies
+
+- [fs/promises](https://nodejs.org/api/fs.html#fs_fs_promises_api)
+

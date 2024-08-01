@@ -1,0 +1,47 @@
+# User Management Application
+
+## Description
+
+This project is an ExpressJS application that manages user data using Sequelize ORM to interact with a MySQL database. It implements authentication and authorization for secure user access to routes. Users can log in to the application, view their profile, and add new users if they have admin privileges.
+
+## Installation
+
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd <project-directory>`
+3. Install dependencies: `npm install`
+
+## Usage
+
+1. Set up a MySQL database named "db_course4" and configure the connection in `config/database.js`.
+2. Create the necessary tables whether by running Sequelize migrations: `sequelize db:migrate` or manually from mysql.
+3. Seed the database with initial data (optional): `sequelize db:seed:all`.
+4. Start the server: `npm start`.
+5. Access the application at: `http://localhost:3000`.
+
+## Features
+
+1. **User Authentication**: Users can log in to the application to access restricted routes.
+2. **User Profile**: Each user can view their profile information, including name and username.
+3. **User Management**: Admin (user who have id = 1)users can add new users to the system.
+
+## Routes
+
+1. **POST /users/login**: Generates an authentication token for user login.
+2. **GET /users/:id**: Retrieves user information for the specified user ID (accessible only to the user).
+3. **POST /users**: Adds a new user to the system (accessible only to admin).
+
+## Technologies Used
+
+- Express.js
+- Sequelize ORM
+- MySQL
+- JSON Web Tokens (JWT)
+
+## Error Handling
+
+The application implements error handling for various scenarios, such as invalid requests, unauthorized access, and internal server errors.
+
+## Credits
+
+This project was created by [ُShahla Nikbakht].
+
